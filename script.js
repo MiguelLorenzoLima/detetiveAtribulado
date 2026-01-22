@@ -1,28 +1,21 @@
-const cards = document.querySelectorAll('.card');
-
-cards.forEach(card => {
+document.querySelectorAll('.card').forEach(card => {
     const img = card.querySelector('img');
-    const yesBtn = card.querySelector('.yes');
-    const noBtn = card.querySelector('.no');
+    const yes = card.querySelector('.yes');
+    const no = card.querySelector('.no');
 
-    // Mostrar botões ao clicar na imagem
-    img.addEventListener('click', () => {
+    img.onclick = () => {
         if (!card.classList.contains('answered')) {
             card.classList.add('show-actions');
         }
-    });
+    };
 
-    // Clique em SIM
-    yesBtn.addEventListener('click', () => {
-        card.classList.add('correct', 'answered');
-        card.classList.remove('wrong');
+    yes.onclick = () => {
+        card.classList.add('correct','answered');
         card.classList.remove('show-actions');
-    });
+    };
 
-    // Clique em NÃO
-    noBtn.addEventListener('click', () => {
-        card.classList.add('wrong', 'answered');
-        card.classList.remove('correct');
+    no.onclick = () => {
+        card.classList.add('wrong','answered');
         card.classList.remove('show-actions');
-    });
+    };
 });

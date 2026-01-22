@@ -1,106 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detetive - Pessoas</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 <body>
-
+    
 <nav class="nav">
-    <a href="index.html" class="active">Atribulado</a>
-    <a href="arma.html">Arma</a>
-    <a href="lugar.html">Local</a>
+    <a href="#atribulado">Atribulado</a>
+    <a href="#arma">Arma</a>
+    <a href="#lugar">Lugar</a>
 </nav>
 
-<main class="container">
-    <div class="grid">
 
-        <!-- CARD -->
+<!-- ATRIBULADO -->
+<section id="atribulado">
+<h2 class="section-title">Atribulado</h2>
+<div class="grid">
+    <!-- pessoas -->
+    <script>
+        const pessoas = [
+            "gugares","italo","joao","leo","mig","renan","vito","thur"
+        ];
+        document.write(pessoas.map(p => `
         <div class="card">
-            <div class="image-box">
-                <img src="img/gugares.jpeg">
-            </div>
+            <div class="image-box"><img src="img/${p}.jpeg"></div>
             <div class="actions">
                 <button class="yes">Sim</button>
                 <button class="no">Não</button>
             </div>
-        </div>
+        </div>`).join(""));
+    </script>
+</div>
+</section>
 
+<div class="divider"></div>
+
+<!-- ARMA -->
+<section id="arma">
+<h2 class="section-title">Arma</h2>
+<div class="grid">
+    <script>
+        const armas = [
+            "bola","dog","monster","bike","taco","prego","martelo","pistola"
+        ];
+        document.write(armas.map(a => `
         <div class="card">
-            <div class="image-box">
-                <img src="img/italo.jpeg">
-            </div>
+            <div class="image-box"><img src="img/${a}.jpeg"></div>
             <div class="actions">
                 <button class="yes">Sim</button>
                 <button class="no">Não</button>
             </div>
-        </div>
+        </div>`).join(""));
+    </script>
+</div>
+</section>
 
+<div class="divider"></div>
+
+<!-- LUGAR -->
+<section id="lugar">
+<h2 class="section-title">Lugar</h2>
+<div class="grid">
+    <script>
+        const lugares = [
+            "academia","bar","campinho","casaGugares","casaItalo",
+            "casaMig","casaRenan","casaVini","leoAntiga","leoNova","piscina"
+        ];
+        document.write(lugares.map(l => `
         <div class="card">
-            <div class="image-box">
-                <img src="img/joao.jpeg">
-            </div>
+            <div class="image-box"><img src="img/${l}.jpeg"></div>
             <div class="actions">
                 <button class="yes">Sim</button>
                 <button class="no">Não</button>
             </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="img/leo.jpeg">
-            </div>
-            <div class="actions">
-                <button class="yes">Sim</button>
-                <button class="no">Não</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="img/mig.jpeg">
-            </div>
-            <div class="actions">
-                <button class="yes">Sim</button>
-                <button class="no">Não</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="img/renan.jpeg">
-            </div>
-            <div class="actions">
-                <button class="yes">Sim</button>
-                <button class="no">Não</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="img/vito.jpeg">
-            </div>
-            <div class="actions">
-                <button class="yes">Sim</button>
-                <button class="no">Não</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="image-box">
-                <img src="img/thur.jpeg">
-            </div>
-            <div class="actions">
-                <button class="yes">Sim</button>
-                <button class="no">Não</button>
-            </div>
-        </div>
-
-    </div>
-</main>
-
+        </div>`).join(""));
+    </script>
+</div>
+</section>
 <script src="script.js"></script>
 </body>
 </html>
+
